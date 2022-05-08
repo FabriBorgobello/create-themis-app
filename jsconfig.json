@@ -3,6 +3,7 @@
     "baseUrl": ".",
     "jsx": "react",
     "paths": {
+      // Make sure to use the same path as the one in jsconfig.json
       "@pages/*": ["./pages/*"],
       "@styles/*": ["./styles/*"]
     }
