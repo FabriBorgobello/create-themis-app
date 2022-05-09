@@ -1,25 +1,23 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 ## Dependencies
 
 ### Basic
 
-[nextjs](https://nextjs.org/)
+- [nextjs](https://nextjs.org/)
 
 ### Forms and validation
 
-[react-hook-form](https://react-hook-form.com/)
-[yup](https://github.com/jquense/yup)
+- [react-hook-form](https://react-hook-form.com/)
+- [yup](https://github.com/jquense/yup)
 
 ### Testing
 
-[jest](https://jestjs.io/)
-[msw](https://mswjs.io/)
-[react-testing-library](https://testing-library.com/)
+- [jest](https://jestjs.io/)
+- [msw](https://mswjs.io/)
+- [react-testing-library](https://testing-library.com/)
 
 ### Miscelaneous
 
-[clsx](https://github.com/lukeed/clsx)
+- [clsx](https://github.com/lukeed/clsx)
 
 ## Getting Started
 
