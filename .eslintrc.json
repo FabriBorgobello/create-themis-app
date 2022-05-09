@@ -34,6 +34,7 @@
       "alias": {
         // Make sure to use the same paths as the ones in jsconfig.json
         "map": [
+          ["@api", "./api"],
           ["@components", "./components"],
           ["@contexts", "./contexts"],
           ["@hooks", "./hooks"],

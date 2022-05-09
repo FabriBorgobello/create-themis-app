@@ -2,6 +2,7 @@ import Error from "next/error";
 import { ErrorBoundary } from "react-error-boundary";
 
 import ErrorFallback from "@components/ErrorFallback/ErrorFallback";
+
 import "@styles/globals.css";
 
 function MyApp({ Component, pageProps }) {

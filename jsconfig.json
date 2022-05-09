@@ -4,6 +4,7 @@
     "jsx": "react",
     "paths": {
       // Make sure to use the same paths as the ones in .eslintrc.json
+      "@api/*": ["./api/*"],
       "@components/*": ["./components/*"],
       "@contexts/*": ["./contexts/*"],
       "@hooks/*": ["./hooks/*"],

@@ -6,7 +6,7 @@ export default function Home({ serverSideProps }) {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Themis App</title>
+        <title>Themis App - Home</title>
       </Head>
 
       <main className={styles.main}>
@@ -34,18 +34,18 @@ export default function Home({ serverSideProps }) {
     </div>
   );
 }
-// export async function getServerSideProps(context) {
-//   // Change the status code to 4** or 5** to see the error page.
-//   const STATUS_CODE = 200;
-//   const res = await fetch(`https://mock.codes/${STATUS_CODE}`);
-//   const json = await res.json();
-//   const error = res.ok ? null : json;
+export async function getServerSideProps(context) {
+  // Change the status code to 4** or 5** to see the error page.
+  const STATUS_CODE = 200;
+  const res = await fetch(`https://mock.codes/${STATUS_CODE}`);
+  const json = await res.json();
+  const error = res.ok ? null : json;
 
-//   return {
-//     /*
-//      * This will be passed to the page component as props.
-//      * If there is an error, it will be caught by the Error component.
-//      */
-//     props: { error, serverSideProps: json },
-//   };
-// }
+  return {
+    /*
+     * This will be passed to the page component as props.
+     * If there is an error, it will be caught by the Error component.
+     */
+    props: { error, serverSideProps: json },
+  };
+}
