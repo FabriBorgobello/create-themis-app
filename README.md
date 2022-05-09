@@ -18,6 +18,7 @@
 ### Miscelaneous
 
 - [clsx](https://github.com/lukeed/clsx)
+- [react-error-boundary](https://github.com/bvaughn/react-error-boundary)
 
 ## Getting Started
 

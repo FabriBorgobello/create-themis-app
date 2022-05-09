@@ -1,4 +1,10 @@
-// pages/500.js
 export default function Custom500() {
-  return <h1>Custom 500 - Server-side error occurred</h1>;
+  return (
+    <div>
+      <h1>Error 500 - Internal Server Error</h1>
+      <p>
+        Edit this page on <code>pages/500.js</code>
+      </p>
+    </div>
+  );
 }

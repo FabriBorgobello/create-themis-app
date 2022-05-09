@@ -1,5 +1,8 @@
-import "@styles/globals.css";
 import Error from "next/error";
+import { ErrorBoundary } from "react-error-boundary";
+
+import ErrorFallback from "@components/ErrorFallback/ErrorFallback";
+import "@styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
   // Error handling
@@ -12,7 +15,11 @@ function MyApp({ Component, pageProps }) {
     );
   }
 
-  return <Component {...pageProps} />;
+  return (
+    <ErrorBoundary FallbackComponent={ErrorFallback}>
+      <Component {...pageProps} />
+    </ErrorBoundary>
+  );
 }
 
 export default MyApp;

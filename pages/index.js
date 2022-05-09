@@ -15,10 +15,12 @@ export default function Home({ serverSideProps }) {
           project
         </h1>
 
-        <div className={styles.serverSideContainer}>
-          <h2 className={styles.serverSideTitle}>Server-side props:</h2>
-          <pre>{JSON.stringify(serverSideProps, null, 2)}</pre>
-        </div>
+        {serverSideProps && (
+          <div className={styles.serverSideContainer}>
+            <h2 className={styles.serverSideTitle}>Server-side props:</h2>
+            <pre>{JSON.stringify(serverSideProps, null, 2)}</pre>
+          </div>
+        )}
 
         <p className={styles.description}>
           Get started by editing{" "}
@@ -32,18 +34,18 @@ export default function Home({ serverSideProps }) {
     </div>
   );
 }
-export async function getServerSideProps(context) {
-  // Change the status code to 4** or 5** to see the error page.
-  const STATUS_CODE = 200;
-  const res = await fetch(`https://mock.codes/${STATUS_CODE}`);
-  const json = await res.json();
-  const error = res.ok ? null : json;
+// export async function getServerSideProps(context) {
+//   // Change the status code to 4** or 5** to see the error page.
+//   const STATUS_CODE = 200;
+//   const res = await fetch(`https://mock.codes/${STATUS_CODE}`);
+//   const json = await res.json();
+//   const error = res.ok ? null : json;
 
-  return {
-    /*
-     * This will be passed to the page component as props.
-     * If there is an error, it will be caught by the Error component.
-     */
-    props: { error, serverSideProps: json },
-  };
-}
+//   return {
+//     /*
+//      * This will be passed to the page component as props.
+//      * If there is an error, it will be caught by the Error component.
+//      */
+//     props: { error, serverSideProps: json },
+//   };
+// }
