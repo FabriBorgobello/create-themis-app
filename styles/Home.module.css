@@ -50,3 +50,18 @@
   font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
     Bitstream Vera Sans Mono, Courier New, monospace;
 }
+
+.serverSideContainer {
+  margin-top: 4rem;
+}
+
+.serverSideContainer h2 {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.serverSideContainer pre{
+  border: 1px solid black;
+  padding: 2rem;
+  width: 100%;
+}
