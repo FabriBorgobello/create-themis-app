@@ -3,9 +3,14 @@
     "baseUrl": ".",
     "jsx": "react",
     "paths": {
-      // Make sure to use the same path as the one in jsconfig.json
+      // Make sure to use the same paths as the ones in .eslintrc.json
+      "@components/*": ["./components/*"],
+      "@contexts/*": ["./contexts/*"],
+      "@hooks/*": ["./hooks/*"],
       "@pages/*": ["./pages/*"],
-      "@styles/*": ["./styles/*"]
+      "@styles/*": ["./styles/*"],
+      "@test/*": ["./test/*"],
+      "@utils/*": ["./utils/*"]
     }
   }
 }

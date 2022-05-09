@@ -32,9 +32,15 @@
   "settings": {
     "import/resolver": {
       "alias": {
+        // Make sure to use the same paths as the ones in jsconfig.json
         "map": [
+          ["@components", "./components"],
+          ["@contexts", "./contexts"],
+          ["@hooks", "./hooks"],
           ["@pages", "./pages"],
-          ["@styles", "./styles"]
+          ["@styles", "./styles"],
+          ["@test", "./test"],
+          ["@utils", "./utils"]
         ],
         "extensions": [".ts", ".js", ".jsx", ".json"]
       }

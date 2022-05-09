@@ -2,12 +2,24 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Dependencies
 
-```
+### Basic
+
 [nextjs](https://nextjs.org/)
+
+### Forms and validation
+
 [react-hook-form](https://react-hook-form.com/)
 [yup](https://github.com/jquense/yup)
+
+### Testing
+
+[jest](https://jestjs.io/)
+[msw](https://mswjs.io/)
+[react-testing-library](https://testing-library.com/)
+
+### Miscelaneous
+
 [clsx](https://github.com/lukeed/clsx)
-```
 
 ## Getting Started
 
