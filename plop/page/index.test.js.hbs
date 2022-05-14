@@ -1,0 +1,16 @@
+import { screen } from "@testing-library/react";
+
+import {{pascalCase name}} from "@pages/{{kebabCase name}}";
+import { customRender } from "@test/utils";
+
+describe("{{sentenceCase name}} page", () => {
+  it("renders page title", () => {
+    customRender(<{{pascalCase name}} />);
+
+    const heading = screen.getByRole("heading", {
+      name: /{{sentenceCase name}}/i,
+    });
+
+    expect(heading).toBeInTheDocument();
+  });
+});
