@@ -1,8 +1,8 @@
 import Head from "next/head";
 
-import styles from "../styles/Home.module.css";
+import styles from "@styles/pages/index.module.css";
 
-export default function Home({ serverSideProps }) {
+export default function Home({ data }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -15,10 +15,10 @@ export default function Home({ serverSideProps }) {
           project
         </h1>
 
-        {serverSideProps && (
+        {data && (
           <div className={styles.serverSideContainer}>
             <h2 className={styles.serverSideTitle}>Server-side props:</h2>
-            <pre>{JSON.stringify(serverSideProps, null, 2)}</pre>
+            <pre>{JSON.stringify(data, null, 2)}</pre>
           </div>
         )}
 
@@ -41,11 +41,7 @@ export async function getServerSideProps(context) {
   const json = await res.json();
   const error = res.ok ? null : json;
 
-  return {
-    /*
-     * This will be passed to the page component as props.
-     * If there is an error, it will be caught by the Error component.
-     */
-    props: { error, serverSideProps: json },
-  };
+  /* This will be passed to the page component as props.
+   * If there is an error, it will be caught by the Error component. */
+  return { props: { error, data: json } };
 }
