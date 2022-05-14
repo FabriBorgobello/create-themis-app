@@ -1,3 +1,10 @@
+function removeFirstCharacterIfSlash(str) {
+  return str.charAt(0) === "/" ? str.substr(1) : str;
+}
+function addPageToPath(path) {
+  return path.substr(0, 4) === "pages" ? path : `pages/${path}`;
+}
+
 module.exports = function (plop) {
   plop.setGenerator("page", {
     description: "Creates a new page with its own styles and test files",
@@ -12,6 +19,7 @@ module.exports = function (plop) {
         name: "path",
         message: "What is the path to the page?",
         default: `/pages`,
+        filter: (val) => addPageToPath(removeFirstCharacterIfSlash(val)),
       },
     ],
     actions: [
