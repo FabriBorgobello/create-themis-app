@@ -7,21 +7,27 @@ module.exports = function (plop) {
         name: "name",
         message: "What is the name of the page?",
       },
+      {
+        type: "input",
+        name: "path",
+        message: "What is the path to the page?",
+        default: `/pages`,
+      },
     ],
     actions: [
       {
         type: "add",
-        path: "pages/{{kebabCase name}}.js",
+        path: "./{{path}}/{{kebabCase name}}.js",
         templateFile: "plop/page/index.js.hbs",
       },
       {
         type: "add",
-        path: "styles/pages/{{kebabCase name}}.module.css",
+        path: "./styles/{{path}}/{{kebabCase name}}.module.css",
         templateFile: "plop/page/index.module.css.hbs",
       },
       {
         type: "add",
-        path: "__tests__/pages/{{kebabCase name}}.test.js",
+        path: "__tests__/{{path}}/{{kebabCase name}}.test.js",
         templateFile: "plop/page/index.test.js.hbs",
       },
     ],
