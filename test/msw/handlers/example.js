@@ -1,6 +1,6 @@
 import { rest } from "msw";
 
-import { API_URL } from "@test/utils";
+import { API_URL } from "@/test/utils";
 
 const example = [
   rest.post(`${API_URL}/example`, (req, res, ctx) =>

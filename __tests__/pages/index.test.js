@@ -1,7 +1,7 @@
 import { screen } from "@testing-library/react";
 
-import Home from "@pages/index";
-import { customRender } from "@test/utils";
+import Home from "@/pages/index";
+import { customRender } from "@/test/utils";
 
 describe("Home", () => {
   it("renders a heading", () => {

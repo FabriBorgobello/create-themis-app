@@ -1,4 +1,4 @@
-import mockedServer from "@test/msw/server";
+import mockedServer from "@/test/msw/server";
 import "@testing-library/jest-dom";
 
 /* Jest mocks */

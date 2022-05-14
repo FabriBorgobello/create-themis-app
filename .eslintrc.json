@@ -33,16 +33,7 @@
     "import/resolver": {
       "alias": {
         // Make sure to use the same paths as the ones in jsconfig.json
-        "map": [
-          ["@api", "./api"],
-          ["@components", "./components"],
-          ["@contexts", "./contexts"],
-          ["@hooks", "./hooks"],
-          ["@pages", "./pages"],
-          ["@styles", "./styles"],
-          ["@test", "./test"],
-          ["@utils", "./utils"]
-        ],
+        "map": [["@/*", "./"]],
         "extensions": [".ts", ".js", ".jsx", ".json"]
       }
     }
